@@ -1,6 +1,8 @@
 # Smarthome Project
 This is an event based smart home project. It was prepared as a University project with one of my friend. The idea was to create an application, where home appliances could be controlled based on events, such as time, sensor value. This is the first prototype, that can turn a coffee machine on at 7 am, and turn off, when coffee is done.
 
+![](imgs/promo.gif)
+
 Read the [documentation](docs/documentation.pdf) for more information.
 
 WARNING: You need git-lfs to download all files from the repo.
