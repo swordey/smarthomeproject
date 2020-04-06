@@ -1,0 +1,51 @@
+#:kivy 1.0.9
+
+<ProgramScreen>:
+	
+
+<ModulScreen>:
+	FloatLayout:
+		size_hint: 1, 1
+		pos_hint: {'center_x': .5, 'center_y': .5}
+		Button:
+			id: btn1
+			pos_hint: {"x": 0.90, "y": 0.95}
+			on_release: app.open_settings()
+			size_hint: 0.1, 0.05
+			background_normal: "./pictures/settings_orig.png"
+			background_down: "./pictures/settings.png"
+			border: 0,0,0,0
+
+<AddModulScreen>:
+	FloatLayout:
+		size_hint: 1, 1
+		pos_hint: {'center_x': .5, 'center_y': .5}
+		Button:
+			id: btn1
+			pos_hint: {"x": 0.90, "y": 0.95}
+			on_release: app.open_settings()
+			size_hint: 0.1, 0.05
+			background_normal: "./pictures/settings_orig.png"
+			background_down: "./pictures/settings.png"
+			border: 0,0,0,0
+		Button:
+			id: btn
+			text: 'Condition'
+			pos_hint: {"x":0,"y":0.9}
+			size_hint: (0.2, 1)
+			on_release: dropdown.open(self)
+			size_hint_y: None
+		DropDown:
+			id: dropdown
+			on_parent: self.dismiss()
+			on_select: btn.text = '{}'.format(args[1])
+			Button:
+				text: 'Sensor'
+				size_hint_y: None
+				height: '48dp'
+				on_release: dropdown.select('Sensor')
+			Button:
+				text: 'Date'
+				size_hint_y: None
+				height: '48dp'
+				on_release: dropdown.select('Date')

@@ -1,0 +1,1 @@
+[{"data": {"commandData": {"set": "on|off", "deviceid": "actuator1"}, "ip": "192.168.0.113", "state": "off", "commands": ["on", "off"], "name": "hosszabito"}, "id": "actuator1"}]

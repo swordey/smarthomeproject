@@ -1,0 +1,89 @@
+<AddModulScreen>:
+	FloatLayout:
+		size_hint: 1, 1
+		pos_hint: {'center_x': .5, 'center_y': .5}
+		Button:
+			size_hint: 0.1, 0.05
+			pos_hint: {"x": 0.90, "y": 0.95}
+			on_release: app.open_settings()
+			background_normal: "./pictures/settings_orig.png"
+			background_down: "./pictures/settings.png"
+			border: 0,0,0,0
+        Label:
+            text: 'Type:'
+            size_hint: (0.45, 0.17)
+			pos_hint: {'x':0.05,'y':0.73}
+		Button:
+		    id: condbtn
+			text: 'Select'
+			size_hint: (0.45, 0.17)
+			pos_hint: {'x':0.5,'y':0.73}
+			on_release: conddd.open(self)
+		DropDown:
+			id: conddd
+			on_select: root.updateScreen(args[1])
+			Button:
+				text: 'Sensor'
+				size_hint_y: None
+				height: '48dp'
+				on_release: conddd.select('Sensor')
+			Button:
+				text: 'Date'
+				size_hint_y: None
+				height: '48dp'
+				on_release: conddd.select('Date')
+            Button:
+				text: 'Button'
+				size_hint_y: None
+				height: '48dp'
+				on_release: conddd.select('Button')
+        Label:
+            text: 'Sensor name:'
+            id: sensorlabel
+            size_hint: (0.45, 0.17)
+			pos_hint: {'x':-1,'y':0.56}
+        Button:
+            text: 'Select'
+            id: sensorbtn
+			size_hint: (0.45, 0.17)
+			pos_hint: {'x':-1,'y':0.56}
+        Label:
+            text: 'Condition:'
+            id: sensorcondlabel
+            size_hint: (0.45, 0.17)
+			pos_hint: {'x':-1,'y':0.39}
+        TextInput:
+            text: 'Type'
+            id: sensorcond
+            size_hint: (0.45, 0.17)
+            pos_hint: {'x': -1, 'y': 0.39}
+        Label:
+            text: 'Condition (hh:mm):'
+            id: timecondlabel
+            size_hint: (0.45, 0.34)
+			pos_hint: {'x':-1,'y':0.39}
+        TextInput:
+            text: 'Type'
+            id: timecond
+            size_hint: (0.45, 0.34)
+            pos_hint: {'x': -1, 'y': 0.39}
+        Label:
+            text: 'Command:'
+            size_hint: (0.45, 0.17)
+			pos_hint: {'x':0.05,'y':0.22}
+        Button:
+            text: 'Select'
+            id: actuatorcomm
+            size_hint: (0.45, 0.17)
+            pos_hint: {'x': 0.5, 'y': 0.22}
+        Button:
+            text: 'Save'
+            id: savebtn
+			size_hint: (0.45, 0.17)
+			pos_hint: {'x': 0.5, 'y': 0.05}
+			on_release: root.myparent.saveCondition(self)
+        Button:
+            text: 'Back'
+            id: backbtn
+			size_hint: (0.45, 0.17)
+			pos_hint: {'x': 0.05, 'y': 0.05}	

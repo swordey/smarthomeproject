@@ -1,0 +1,1 @@
+[{"actuatorid": "actuator1", "running": true, "conditions": [{"timecond": "21:39", "type": "Date", "id": "Cond0", "value": "on"}, {"sensorcond": ">90", "sensorid": "h1", "type": "Sensor", "id": "Cond2", "value": "off"}], "programname": "Program0"}]

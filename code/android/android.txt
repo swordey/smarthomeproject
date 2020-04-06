@@ -1,0 +1,3 @@
+title=SmartHomeSolutions
+author=Kardos Tamas
+orientation=portrait
